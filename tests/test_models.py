@@ -5,7 +5,7 @@ from packaging import version
 from unittest import TestCase
 import numpy as np
 import tensorflow as tf
-import tensorflow.keras.layers as kl
+import keras.layers as kl
 from deel.lip import Sequential, Model, vanillaModel
 from deel.lip.layers import SpectralConv2D, SpectralDense, ScaledL2NormPooling2D
 from deel.lip.activations import GroupSort2
