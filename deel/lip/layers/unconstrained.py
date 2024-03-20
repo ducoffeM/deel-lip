@@ -35,7 +35,7 @@ from .base_layer import Condensable
 
 
 @register_keras_serializable("deel-lip", "PadConv2D")
-class PadConv2D(tf.keras.layers.Conv2D, Condensable):
+class PadConv2D(keras.layers.Conv2D, Condensable):
     def __init__(
         self,
         filters,
@@ -147,7 +147,7 @@ class PadConv2D(tf.keras.layers.Conv2D, Condensable):
     def vanilla_export(self):
         self._kwargs["name"] = self.name
         if self.old_padding.lower() in ["same", "valid"]:
-            layer_type = tf.keras.layers.Conv2D
+            layer_type = keras.layers.Conv2D
         else:
             layer_type = PadConv2D
         layer = layer_type(
