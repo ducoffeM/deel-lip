@@ -87,8 +87,8 @@ class KR(Loss):
 
         Args:
             multi_gpu (bool): set to True when running on multi-GPU/TPU
-            reduction: passed to tf.keras.Loss constructor
-            name (str): passed to tf.keras.Loss constructor
+            reduction: passed to keras.Loss constructor
+            name (str): passed to keras.Loss constructor
 
         """
         self.eps = 1e-7
@@ -146,8 +146,8 @@ class HKR(Loss):
                 between hinge and KR, the first label must yield the positive class
                 while the second yields negative class.
             multi_gpu (bool): set to True when running on multi-GPU/TPU
-            reduction: passed to tf.keras.Loss constructor
-            name (str): passed to tf.keras.Loss constructor
+            reduction: passed to keras.Loss constructor
+            name (str): passed to keras.Loss constructor
 
         """
         self.alpha = tf.Variable(alpha, dtype=tf.float32)
@@ -220,8 +220,8 @@ class HingeMargin(Loss):
 
         Args:
             min_margin (float): margin to enforce.
-            reduction: passed to tf.keras.Loss constructor
-            name (str): passed to tf.keras.Loss constructor
+            reduction: passed to keras.Loss constructor
+            name (str): passed to keras.Loss constructor
 
         """
         self.min_margin = tf.Variable(min_margin, dtype=tf.float32)
@@ -256,8 +256,8 @@ class MulticlassKR(Loss):
 
         Args:
             multi_gpu (bool): set to True when running on multi-GPU/TPU
-            reduction: passed to tf.keras.Loss constructor
-            name (str): passed to tf.keras.Loss constructor
+            reduction: passed to keras.Loss constructor
+            name (str): passed to keras.Loss constructor
 
         """
         self.eps = 1e-7
@@ -320,8 +320,8 @@ class MulticlassHinge(Loss):
 
         Args:
             min_margin (float): margin to enforce.
-            reduction: passed to tf.keras.Loss constructor
-            name (str): passed to tf.keras.Loss constructor
+            reduction: passed to keras.Loss constructor
+            name (str): passed to keras.Loss constructor
 
         """
         self.min_margin = tf.Variable(min_margin, dtype=tf.float32)
@@ -364,8 +364,8 @@ class MulticlassHKR(Loss):
             alpha (float): regularization factor
             min_margin (float): margin to enforce.
             multi_gpu (bool): set to True when running on multi-GPU/TPU
-            reduction: passed to tf.keras.Loss constructor
-            name (str): passed to tf.keras.Loss constructor
+            reduction: passed to keras.Loss constructor
+            name (str): passed to keras.Loss constructor
 
         """
         self.alpha = tf.Variable(alpha, dtype=tf.float32)
@@ -409,8 +409,8 @@ class MultiMargin(Loss):
 
         Args:
             min_margin (float): margin to enforce.
-            reduction: passed to tf.keras.Loss constructor
-            name (str): passed to tf.keras.Loss constructor
+            reduction: passed to keras.Loss constructor
+            name (str): passed to keras.Loss constructor
 
         """
         self.min_margin = tf.Variable(min_margin, dtype=tf.float32)
@@ -551,7 +551,7 @@ class TauBinaryCrossentropy(Loss):
     def call(self, y_true, y_pred):
         y_true = tf.cast(y_true > 0, y_pred.dtype)
         return (
-            tf.keras.losses.binary_crossentropy(
+            keras.losses.binary_crossentropy(
                 y_true, self.tau * y_pred, from_logits=True
             )
             / self.tau
