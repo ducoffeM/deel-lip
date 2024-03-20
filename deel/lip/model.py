@@ -9,12 +9,12 @@ for condensation and vanilla exportation.
 import math
 from warnings import warn
 import numpy as np
-from tensorflow.keras import Sequential as KerasSequential, Model as KerasModel
-from tensorflow.keras import activations as ka
-from tensorflow.keras import layers as kl
+from keras import Sequential as KerasSequential, Model as KerasModel
+from keras import activations as ka
+from keras import layers as kl
 from .layers import LipschitzLayer, Condensable
-from tensorflow.keras.utils import register_keras_serializable
-from tensorflow.keras.models import clone_model
+from keras.utils import register_keras_serializable
+from keras.models import clone_model
 
 
 _msg_not_lip = "Sequential model contains a layer which is not a 1-Lipschitz layer: {}"
