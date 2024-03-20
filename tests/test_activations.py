@@ -1,9 +1,9 @@
 from unittest import TestCase
 import tensorflow as tf
-from tensorflow.keras.models import Sequential, load_model
-from tensorflow.keras.layers import Input
-from tensorflow.keras.optimizers import SGD
-from tensorflow.keras.losses import CategoricalCrossentropy
+from keras.models import Sequential, load_model
+from keras.layers import Input
+from keras.optimizers import SGD
+from keras.losses import CategoricalCrossentropy
 from deel.lip.activations import GroupSort, Householder
 import os
 import numpy as np
