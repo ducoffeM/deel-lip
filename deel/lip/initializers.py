@@ -7,15 +7,15 @@ This module contains extra Keras initializers, e.g. SpectralInitializer for 1-Li
 matrix initialization.
 They can be used as kernel initializers in any Keras layer.
 """
-from tensorflow.keras.initializers import Initializer
-from tensorflow.keras import initializers
+from keras.initializers import Initializer
+from keras import initializers
 from .normalizers import (
     reshaped_kernel_orthogonalization,
     DEFAULT_EPS_SPECTRAL,
     DEFAULT_EPS_BJORCK,
     DEFAULT_BETA_BJORCK,
 )
-from tensorflow.keras.utils import register_keras_serializable
+from keras.utils import register_keras_serializable
 
 
 @register_keras_serializable("deel-lip", "SpectralInitializer")
