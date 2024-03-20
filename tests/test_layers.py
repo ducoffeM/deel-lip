@@ -10,7 +10,7 @@ import unittest
 import numpy as np
 import tensorflow as tf
 from tensorboard.plugins.hparams import api as hp
-from tensorflow.keras import backend as K, Input, Model, metrics, callbacks
+from keras import backend as K, Input, Model, metrics, callbacks
 
 from deel.lip.constraints import (
     AutoWeightClipConstraint,
@@ -22,10 +22,10 @@ if tf.__version__.startswith("2.0"):
     from tensorflow.python.framework.random_seed import set_seed
 else:
     set_seed = tf.random.set_seed
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Layer
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.models import load_model
+from keras.layers import Dense
+from keras.layers import Layer
+from keras.optimizers import Adam
+from keras.models import load_model
 from deel.lip.callbacks import CondenseCallback, MonitorCallback
 from deel.lip.layers import (
     LipschitzLayer,
