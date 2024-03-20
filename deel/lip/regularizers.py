@@ -32,8 +32,8 @@ import warnings
 from abc import ABC, abstractmethod
 
 import tensorflow as tf
-from tensorflow.keras.regularizers import Regularizer
-from tensorflow.keras.utils import register_keras_serializable
+from keras.regularizers import Regularizer
+from keras.utils import register_keras_serializable
 
 
 class Lorth(ABC):
