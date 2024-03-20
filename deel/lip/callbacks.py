@@ -114,7 +114,7 @@ class MonitorCallback(Callback):
                 kernel = getattr(layer, self.target)
                 w_shape = kernel.shape.as_list()
                 sigmas = tf.linalg.svd(
-                    tf.keras.backend.reshape(kernel, [-1, w_shape[-1]]),
+                    keras.backend.reshape(kernel, [-1, w_shape[-1]]),
                     full_matrices=False,
                     compute_uv=False,
                 ).numpy()
