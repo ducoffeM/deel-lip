@@ -10,9 +10,8 @@ information.
 """
 import math
 import tensorflow as tf
-from tensorflow.keras.losses import Loss
-from tensorflow.keras.losses import Reduction
-from tensorflow.keras.utils import register_keras_serializable
+from keras.losses import Loss
+from keras.utils import register_keras_serializable
 
 
 def _delta_multiclass(y_true, y_pred):
@@ -120,7 +119,7 @@ class BinaryProvableRobustAccuracy(Loss):
         self,
         epsilon=36 / 255,
         lip_const=1.0,
-        reduction=Reduction.AUTO,
+        reduction="auto",  # Reduction.AUTO,
         name="BinaryProvableRobustAccuracy",
     ):
         r"""
