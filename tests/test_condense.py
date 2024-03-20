@@ -17,9 +17,9 @@ from deel.lip.layers import (
     ScaledL2NormPooling2D,
 )
 import tensorflow as tf
-from tensorflow.keras.layers import Flatten, Dense
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras import backend as K, Input, metrics, callbacks
+from keras.layers import Flatten, Dense
+from keras.optimizers import Adam
+from keras import backend as K, Input, metrics, callbacks
 
 FIT = "fit_generator" if tf.__version__.startswith("2.0") else "fit"
 EVALUATE = "evaluate_generator" if tf.__version__.startswith("2.0") else "evaluate"
