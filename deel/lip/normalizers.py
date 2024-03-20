@@ -7,7 +7,7 @@ This module contains computation function, for Bjorck and spectral
 normalization. This is done for internal use only.
 """
 import tensorflow as tf
-from tensorflow.keras import backend as K
+from keras import backend as K
 
 from .utils import _maybe_transpose_kernel, _zero_upscale2D
 
