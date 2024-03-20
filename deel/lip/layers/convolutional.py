@@ -343,7 +343,7 @@ class SpectralConv2DTranspose(Conv2DTranspose, LipschitzLayer, Condensable):
         3. divide the output by the Lipschitz target K to ensure K-Lipschitzity.
 
         This documentation reuses the body of the original
-        `tf.keras.layers.Conv2DTranspose` doc.
+        `keras.layers.Conv2DTranspose` doc.
 
         Args:
             filters: Integer, the dimensionality of the output space
