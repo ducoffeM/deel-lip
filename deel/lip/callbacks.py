@@ -9,7 +9,7 @@ import os
 from typing import Optional, Dict, Iterable
 
 import tensorflow as tf
-from tensorflow.keras.callbacks import Callback
+from keras.callbacks import Callback
 import numpy as np
 from .layers import Condensable
 
