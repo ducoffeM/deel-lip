@@ -11,11 +11,11 @@ import unittest
 import numpy as np
 import tensorflow as tf
 from tensorboard.plugins.hparams import api as hp
-from tensorflow.keras import Input, Model
-from tensorflow.keras import backend as K
-from tensorflow.keras import metrics
-from tensorflow.keras.layers import Dense, Layer
-from tensorflow.keras.optimizers import Adam
+from keras import Input, Model
+from keras import backend as K
+from keras import metrics
+from keras.layers import Dense, Layer
+from keras.optimizers import Adam
 
 from deel.lip.compute_layer_sv import compute_layer_sv
 from deel.lip.layers import (
