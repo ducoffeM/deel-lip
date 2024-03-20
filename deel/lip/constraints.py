@@ -7,15 +7,15 @@ This module contains extra constraint objects. These object can be added as para
 regular layers.
 """
 import tensorflow as tf
-from tensorflow.keras import backend as K
-from tensorflow.keras.constraints import Constraint
+from keras import backend as K
+from keras.constraints import Constraint
 from .normalizers import (
     reshaped_kernel_orthogonalization,
     DEFAULT_EPS_SPECTRAL,
     DEFAULT_EPS_BJORCK,
     DEFAULT_BETA_BJORCK,
 )
-from tensorflow.keras.utils import register_keras_serializable
+from keras.utils import register_keras_serializable
 
 
 @register_keras_serializable("deel-lip", "WeightClipConstraint")
