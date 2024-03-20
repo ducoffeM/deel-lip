@@ -23,10 +23,10 @@ be done by setting the param `eps_bjorck=None`.
 
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras import backend as K
-from tensorflow.keras.initializers import RandomNormal
-from tensorflow.keras.layers import Conv2D, Conv2DTranspose
-from tensorflow.keras.utils import register_keras_serializable
+from keras import backend as K
+from keras.initializers import RandomNormal
+from keras.layers import Conv2D, Conv2DTranspose
+from keras.utils import register_keras_serializable
 
 from ..constraints import SpectralConstraint
 from ..initializers import SpectralInitializer
