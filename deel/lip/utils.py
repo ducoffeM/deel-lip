@@ -8,8 +8,8 @@ Contains utility functions.
 from typing import Generator, Tuple, Any
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras import backend as K
+from keras import Model
+from keras import backend as K
 
 
 def evaluate_lip_const_gen(
