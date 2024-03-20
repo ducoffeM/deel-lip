@@ -23,8 +23,8 @@ be done by setting the param `eps_bjorck=None`.
 
 import numpy as np
 import tensorflow as tf
-import tensorflow.keras.layers as keraslayers
-from tensorflow.keras.utils import register_keras_serializable
+import keras.layers as keraslayers
+from keras.utils import register_keras_serializable
 
 from .base_layer import LipschitzLayer
 
