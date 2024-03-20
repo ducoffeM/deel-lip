@@ -168,7 +168,7 @@ class TestHouseholder(TestCase):
         """Householder with theta=pi on 2-D tensor (bs, n).
         Theta=pi means Id if z1 < 0, and reflection if z1 > 0.
         """
-        hh = Householder(theta_initializer=tf.keras.initializers.Constant(np.pi))
+        hh = Householder(theta_initializer=keras.initializers.Constant(np.pi))
 
         bs = np.random.randint(64, 512)
         n = np.random.randint(1, 1024) * 2
@@ -235,7 +235,7 @@ class TestHouseholder(TestCase):
         """Householder with theta=pi on 4-D tensor (bs, h, w, c).
         Theta=pi means Id if z1 < 0, and reflection if z1 > 0.
         """
-        hh = Householder(theta_initializer=tf.keras.initializers.Constant(np.pi))
+        hh = Householder(theta_initializer=keras.initializers.Constant(np.pi))
 
         bs = np.random.randint(32, 128)
         h, w = np.random.randint(1, 64), np.random.randint(1, 64)

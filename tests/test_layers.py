@@ -1052,7 +1052,7 @@ class TestSpectralConv2DTranspose(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             model_path = os.path.join(tmpdir, "model.keras")
             model.save(model_path)
-            tf.keras.models.load_model(model_path)
+            keras.models.load_model(model_path)
 
 
 if __name__ == "__main__":

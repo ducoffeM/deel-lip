@@ -151,7 +151,7 @@ class TestPadConv2D(unittest.TestCase):
             layer_params_ref["padding"] = "same"
 
         model_ref = generate_k_lip_model(
-            layer_type=tf.keras.layers.Conv2D,
+            layer_type=keras.layers.Conv2D,
             layer_params=layer_params_ref,
             input_shape=x_pad.shape[1:],
             k=1.0,
