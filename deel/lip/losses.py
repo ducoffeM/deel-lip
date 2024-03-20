@@ -9,13 +9,13 @@ This module contains losses used in Wasserstein distance estimation. See
 from functools import partial
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.losses import (
+from keras.losses import (
     categorical_crossentropy,
     sparse_categorical_crossentropy,
     Loss,
     Reduction,
 )
-from tensorflow.keras.utils import register_keras_serializable
+from keras.utils import register_keras_serializable
 
 
 @register_keras_serializable("deel-lip", "_kr")
