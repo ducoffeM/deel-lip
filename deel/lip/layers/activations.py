@@ -9,11 +9,11 @@ layers.
 """
 import math
 import tensorflow as tf
-from tensorflow.keras import backend as K
-from tensorflow.keras.constraints import MinMaxNorm
-from tensorflow.keras.layers import Layer, PReLU
+from keras import backend as K
+from keras.constraints import MinMaxNorm
+from keras.layers import Layer, PReLU
 from .base_layer import LipschitzLayer
-from tensorflow.keras.utils import register_keras_serializable
+from keras.utils import register_keras_serializable
 
 
 @register_keras_serializable("deel-lip", "MaxMin")
