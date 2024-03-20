@@ -229,7 +229,7 @@ class Householder(Layer, LipschitzLayer):
             k_coef_lip (str): The lipschitz coefficient to be enforced.
             theta_initializer: initializer for the angle theta of reflection. Defaults
                 to pi/2, which corresponds to GroupSort2.
-            **kwargs: parameters passed to the `tf.keras.layers.Layer`.
+            **kwargs: parameters passed to the `keras.layers.Layer`.
 
         Input shape:
             Arbitrary. Use the keyword argument `input_shape` (tuple of integers, does
