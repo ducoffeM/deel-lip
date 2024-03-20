@@ -28,7 +28,7 @@ Lipschitz-constrained. They are base classes for more advanced layers. Do not us
 layers as is, since they are not Lipschitz constrained.
 """
 import tensorflow as tf
-from tensorflow.keras.utils import register_keras_serializable
+from keras.utils import register_keras_serializable
 
 from ..utils import _padding_circular
 from .base_layer import Condensable
