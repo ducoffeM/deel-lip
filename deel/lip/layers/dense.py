@@ -22,9 +22,9 @@ be done by setting the param `eps_bjorck=None`.
 """
 
 import tensorflow as tf
-from tensorflow.keras.initializers import RandomNormal
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.utils import register_keras_serializable
+from keras.initializers import RandomNormal
+from keras.layers import Dense
+from keras.utils import register_keras_serializable
 
 from ..initializers import SpectralInitializer
 from ..normalizers import (
