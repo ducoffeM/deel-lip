@@ -9,7 +9,7 @@ layers.
 """
 import math
 import tensorflow as tf
-from keras import backend as K
+import keras.ops as K
 from keras.constraints import MinMaxNorm
 from keras.layers import Layer, PReLU
 from .base_layer import LipschitzLayer
