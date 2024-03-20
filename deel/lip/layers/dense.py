@@ -142,7 +142,7 @@ class SpectralDense(Dense, LipschitzLayer, Condensable):
         )
         self.sig = self.add_weight(
             shape=tuple([1, 1]),  # maximum spectral  value
-            initializer=tf.keras.initializers.ones,
+            initializer=keras.initializers.ones,
             name="sigma",
             trainable=False,
             dtype=self.dtype,
